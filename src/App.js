@@ -3,13 +3,11 @@ import Marquee from "react-fast-marquee";
 import img1 from "./images/01.png";
 import img2 from "./images/02.png";
 import img3 from "./images/03.png";
-import arrow from "./images/arrow.png";
+import img4 from "./images/04.png";
 import "./App.css";
 
 function MarqueeExample() {
-  const [tooltipVisible, setTooltipVisible] = useState(false);
-  const [tooltipX, setTooltipX] = useState(0);
-  const [tooltipY, setTooltipY] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   function handleClick(imageIndex) {
     switch (imageIndex) {
@@ -22,115 +20,91 @@ function MarqueeExample() {
       case 2:
         window.location.href = "page3.html";
         break;
+      case 3:
+        window.location.href = "page4.html";
+        break;
       default:
         break;
     }
   }
 
-  function handleMouseEnter(e) {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    setTooltipX(mouseX);
-    setTooltipY(mouseY);
-    setTooltipVisible(true);
-  }
-
-  function handleMouseMove(e) {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    setTooltipX(mouseX);
-    setTooltipY(mouseY);
-  }
-
-  function handleMouseLeave() {
-    setTooltipVisible(false);
-  }
-
   return (
     <div className="marquee-container">
-      <Marquee gradient={false} speed={40} direction="up">
+      <Marquee
+        gradient={false}
+        speed={40}
+        direction="left"
+        stop={isHovered}
+        pauseOnHover={true}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         <div
           className="marquee-item"
           onClick={() => handleClick(0)}
-          onMouseEnter={handleMouseEnter}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           <div className="marquee-item-box">
             <img src={img1} alt="example" />
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
             </span>
-            {tooltipVisible && (
-              <div
-                className="tooltip"
-                style={{ left: tooltipX, top: tooltipY }}
-              >
-                <img
-                  className="tooltip-arrow"
-                  src={arrow}
-                  alt="Tooltip arrow"
-                  style={{ top: "-15px", left: "10px" }}
-                />
-                <span className="tooltip-text">Click to learn more</span>
-              </div>
-            )}
           </div>
         </div>
         <div
           className="marquee-item"
           onClick={() => handleClick(1)}
-          onMouseEnter={handleMouseEnter}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           <div className="marquee-item-box">
             <img src={img2} alt="example" />
             <span>
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
             </span>
-            {tooltipVisible && (
-              <div
-                className="tooltip"
-                style={{ left: tooltipX, top: tooltipY }}
-              >
-                <img
-                  className="tooltip-arrow"
-                  src={arrow}
-                  alt="Tooltip arrow"
-                  style={{ top: "-15px", left: "10px" }}
-                />
-                <span className="tooltip-text">Click to learn more</span>
-              </div>
-            )}
           </div>
         </div>
         <div
           className="marquee-item"
-          onClick={() => handleClick(1)}
-          onMouseEnter={handleMouseEnter}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
+          onClick={() => handleClick(2)}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           <div className="marquee-item-box">
-            <img src={img2} alt="example" />
+            <img src={img3} alt="example" />
             <span>
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
             </span>
-            {tooltipVisible && (
-              <div
-                className="tooltip"
-                style={{ left: tooltipX, top: tooltipY }}
-              >
-                <img
-                  className="tooltip-arrow"
-                  src={arrow}
-                  alt="Tooltip arrow"
-                  style={{ top: "-15px", left: "10px" }}
-                />
-                <span className="tooltip-text">Click to learn more</span>
-              </div>
-            )}
+          </div>
+        </div>
+        <div
+          className="marquee-item"
+          onClick={() => handleClick(2)}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className="marquee-item-box">
+            <img src={img4} alt="example" />
+            <span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+            </span>
           </div>
         </div>
       </Marquee>

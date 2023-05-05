@@ -7,12 +7,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 90vh;
+  overflow: hidden; /* add overflow to hide overflowing elements */
 }
 
 .marquee-item {
   display: inline-block;
   margin-right: 40px;
-  position: relative; /* add position */
+  position: relative;
+  animation: marquee 15s linear infinite; /* add animation for scrolling effect */
 }
 
 .marquee-item-content {
@@ -20,7 +22,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
-  position: relative; /* add position */
+  position: relative;
 }
 
 .marquee-item-box {
@@ -29,20 +31,20 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 300px;
-  height: 220px;
+  height: 240px;
   padding: 10px;
   margin-bottom: 20px;
   background-color: #e6e6e6;
   border: 2px solid #ffffff;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  position: relative; /* add position */
+  position: relative;
   z-index: 0;
 }
 
 .marquee-item-box img {
   width: 30%;
-  height: auto;
+  height: 40%;
   margin-bottom: 10px;
 }
 
@@ -55,52 +57,84 @@ body {
 }
 
 /* Tooltip */
-.tooltip {
+/* .tooltip {
   position: absolute;
-  z-index: 1;
+  z-index: 99999;
   display: none;
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: yellow;  
   background-color: #000;
   border-radius: 5px;
   padding: 10px;
-  width: 200px;
-  top: 100%; /* position relative to parent box */
-  left: 50%; /* position relative to parent box */
-  transform: translateX(-50%); /* position relative to parent box */
-}
+  width: 160px;
+  top: 100%;  
+  left: 50%;  
+  transform: translateX(-50%);  
+  line-height: 1.4rem;
+} */
 
-.tooltip:after {
+/* .tooltip:after {
   content: '';
   position: absolute;
-  top: -10px; /* position relative to tooltip box */
-  left: 50%; /* position relative to tooltip box */
+  top: -10px; 
+  left: 50%;  
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: #000 transparent transparent transparent;
-}
+} */
 
-.tooltip-arrow {
+/* .tooltip-arrow {
   position: absolute;
-  left: -10px; /* adjust this value as needed */
-  top: 50%; /* adjust this value as needed */
+  left: -10px;  
+  top: 50%;  
   transform: translateY(-50%);
   z-index: 1;
-}
+} */
 
-.tooltip-text {
+/* .tooltip-text {
   font-weight: bold;
   color: #ffffff;
-}
+  display: block;
+  margin: 4px;
+} */
 
 /* Show Tooltip */
-.marquee-item:hover .tooltip {
+/* .marquee-item:hover .tooltip {
   display: block;
-}
+} */
 
 /* Hide Mouse Cursor */
 .marquee-item:hover {
   cursor: none;
+}
+
+/* Keyframe Animation */
+/* @keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+} */
+/* Add class to marquee item when hovering over the box */
+.marquee-item.hover-stop:hover {
+  animation-play-state: paused;
+  cursor: default;
+}
+
+/* Keyframe Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply animation to marquee item elements without the hover-stop class */
+.marquee-item:not(.hover-stop) {
+  display: inline-block;
+  margin-right: 40px;
+  position: relative;
+  animation: marquee 15s linear infinite;
 }
