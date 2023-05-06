@@ -116,25 +116,25 @@ body {
   100% { transform: translateX(-100%); }
 } */
 /* Add class to marquee item when hovering over the box */
-.marquee-item.hover-stop:hover {
+/* .marquee-item.hover-stop:hover {
   animation-play-state: paused;
   cursor: default;
-}
+} */
 
 /* Keyframe Animation */
-@keyframes marquee {
+/* @keyframes marquee {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
   }
-}
+} */
 
 /* Apply animation to marquee item elements without the hover-stop class */
-.marquee-item:not(.hover-stop) {
+/* .marquee-item:not(.hover-stop) {
   display: inline-block;
   margin-right: 40px;
   position: relative;
   animation: marquee 15s linear infinite;
-}
+} */
