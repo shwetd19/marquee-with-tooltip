@@ -1,9 +1,10 @@
 {
   "name": "react-marquee-with-tooltip",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "Enhancing Marquee Components with Customized Tooltip Features",
   "private": false,
   "repository": {
+    "type": "git",
     "url": "git+https://github.com/shwetd19/marquee-with-tooltip.git"
   },
   "dependencies": {
@@ -41,14 +42,26 @@
       "last 1 safari version"
     ]
   },
+  "peerDependencies": {
+    "react": ">= 16.8.0 || 18.0.0",
+    "react-dom": ">= 16.8.0 || 18.0.0"
+  },
   "bin": {
     "my-npx-command": "index.js"
   },
   "main": "index.js",
   "devDependencies": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "marquee-with-tooltip",
+    "react-component",
+    "reactjs",
+    "tooltip",
+    "custom-tooltip-carousels",
+    "horizontal-scrolling-carousels-with-tooltip"
+  ],
+  "author": "Shwetas Dhake <shwetasdhake16@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/shwetd19/marquee-with-tooltip/issues"
   },

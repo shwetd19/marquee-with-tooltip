@@ -12,13 +12,13 @@ Check out the demo [here](https://shwetd19.github.io/) and play around with some
 If you're using `npm`, in the command prompt run:
 
 ```bash
-npm install marquee-with-tooltip --save
+npm install react-marquee-with-tooltip --save
 ```
 
 If you're using `yarn`, run:
 
 ```bash
-yarn add marquee-with-tooltip
+yarn add react-marquee-with-tooltip
 ```
 
 ## Usage
