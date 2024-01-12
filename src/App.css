@@ -1,0 +1,18 @@
+.App {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+
+.image_wrapper { 
+  margin: 0px 50px;
+}
+
+.image_wrapper img {
+  width: 80%;
+  height: 200px;
+}
+

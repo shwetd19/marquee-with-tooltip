@@ -1,7 +1,11 @@
 {
-  "name": "react-fast",
+  "name": "",
   "version": "0.1.0",
-  "private": true,
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "private": false,
+  "repository": {
+    "url": "git+https://github.com/shwetd19/marquee-with-tooltip.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -40,10 +44,13 @@
   "bin": {
     "my-npx-command": "index.js"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shwetd19/marquee-with-tooltip/issues"
+  },
+  "homepage": "https://github.com/shwetd19/marquee-with-tooltip#readme"
 }
