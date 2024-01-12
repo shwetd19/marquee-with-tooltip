@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Marquee With Tooltip
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[React Marquee-With-Tooltip](https://www.npmjs.com/marquee-with-tooltip) is a lightweight React component that harnesses the power of CSS animations to create silky smooth animations.
 
-## Available Scripts
+Welcome to Marquee With Tooltip, a `npm` React component that enhances marquee elements with customized tooltip features. This component allows you to create a dynamic and interactive scrolling experience with tooltips for each image. Below is a step-by-step guide outlining the process of using this  `npx` package:
+## Demo
 
-In the project directory, you can run:
+Check out the demo [here](https://shwetd19.github.io/) and play around with some sample marquees.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If you're using `npm`, in the command prompt run:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install marquee-with-tooltip --save
+```
 
-### `npm test`
+If you're using `yarn`, run:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+yarn add marquee-with-tooltip
+```
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To use the component, import Marquee into your file:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```jsx
+import Marquee from "marquee-with-tooltip";
+```
+A sample file might look like this (e.g., App.js):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```jsx
+import React from "react";
+import Marquee from "react-fast-marquee";
+import Tooltip from "./Tooltip"; // Import Tooltip component
+import img1 from "./images/one.png";
+// ... (import other images)
 
-### `npm run eject`
+function App() {
+  return (
+    <div className="App">
+      {/* ... (other content) */}
+      <Marquee direction="left" speed={20} delay={5}>
+        {/* Wrap each image with Tooltip component */}
+        <Tooltip text="Image 1">
+          <div className="image_wrapper">
+            <img src={img1} alt="" />
+          </div>
+        </Tooltip>
+        {/* ... (other images with tooltips) */}
+      </Marquee>
+    </div>
+  );
+}
+export default App;
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Props
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `direction` : The direction of the marquee scroll (e.g., "left", "right", "up", "down").
+- `speed` : The speed of the marquee scroll.
+- `delay` : The delay before the marquee starts scrolling.
+- `tooltipAnimation` : The animation type for the tooltip (e.g., "fade-in", "slide-up", "scale"). Default is "fade-in"
+- `tooltipImage` : An optional image to be displayed within the tooltip. This can be used for additional visual context.
+- `cursorVisible` : A boolean prop to control the visibility of the cursor when interacting with tooltips. Default is true.
+- `uniqueTooltip` : A boolean prop that, when set to true, ensures that each image has its own unique tooltip.
+- `linkTo` : The URL or path to navigate when the tooltip is clicked. Enables linking to a new page or a specific route.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tooltip Component
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The Tooltip component enhances your Marquee With Tooltip project by providing interactive and customizable tooltips. Here's how you can use it:
 
-## Learn More
+### Basic Usage of Tooltip Component 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```jsx
+<Tooltip
+  text="Your Customized Tooltip Content"
+  tooltipAnimation="slide-up"
+  tooltipColor="#3498db"
+  tooltipImage={yourOptionalImage}
+  cursorVisible={false}
+  uniqueTooltip={true}
+  linkTo="/your-custom-page"
+>
+  <div className="image_wrapper">
+    <img src={yourImage} alt="" />
+  </div>
+</Tooltip>
+```
+### Feel free to integrate this component into your project and customize it according to your needs.
