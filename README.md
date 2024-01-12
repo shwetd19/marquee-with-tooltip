@@ -1,19 +1,21 @@
 # Marquee With Tooltip
 
+[React Marquee-With-Tooltip](https://www.npmjs.com/marquee-with-tooltip) is a lightweight React component that harnesses the power of CSS animations to create silky smooth animations.
+
 Welcome to Marquee With Tooltip, a `npm` React component that enhances marquee elements with customized tooltip features. This component allows you to create a dynamic and interactive scrolling experience with tooltips for each image. Below is a step-by-step guide outlining the process of using this  `npx` package:
 ## Demo
 
-Check out the demo here and play around with some sample marquees.
+Check out the demo [here](https://shwetd19.github.io/) and play around with some sample marquees.
 
 ## Installation
 
-If you're using npm, in the command prompt run:
+If you're using `npm`, in the command prompt run:
 
 ```bash
 npm install marquee-with-tooltip --save
 ```
 
-If you're using yarn, run:
+If you're using `yarn`, run:
 
 ```bash
 yarn add marquee-with-tooltip
@@ -23,12 +25,12 @@ yarn add marquee-with-tooltip
 
 To use the component, import Marquee into your file:
 
-```
+```jsx
 import Marquee from "marquee-with-tooltip";
 ```
 A sample file might look like this (e.g., App.js):
 
-```
+```jsx
 import React from "react";
 import Marquee from "react-fast-marquee";
 import Tooltip from "./Tooltip"; // Import Tooltip component
@@ -71,7 +73,7 @@ The Tooltip component enhances your Marquee With Tooltip project by providing in
 
 ### Basic Usage of Tooltip Component 
 
-```
+```jsx
 <Tooltip
   text="Your Customized Tooltip Content"
   tooltipAnimation="slide-up"
