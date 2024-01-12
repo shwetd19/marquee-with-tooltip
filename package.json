@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "react-marquee-with-tooltip",
   "version": "0.1.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Enhancing Marquee Components with Customized Tooltip Features",
   "private": false,
   "repository": {
     "url": "git+https://github.com/shwetd19/marquee-with-tooltip.git"
