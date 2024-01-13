@@ -1,6 +1,6 @@
 # Marquee With Tooltip
 
-[React Marquee-With-Tooltip](https://www.npmjs.com/marquee-with-tooltip) is a lightweight React component that harnesses the power of CSS animations to create silky smooth animations.
+[React Marquee-With-Tooltip](https://www.npmjs.com/package/react-marquee-with-tooltip) is a lightweight React component that harnesses the power of CSS animations to create silky smooth animations.
 
 Welcome to Marquee With Tooltip, a `npm` React component that enhances marquee elements with customized tooltip features. This component allows you to create a dynamic and interactive scrolling experience with tooltips for each image. Below is a step-by-step guide outlining the process of using this  `npx` package:
 ## Demo
